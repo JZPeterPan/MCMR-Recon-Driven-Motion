@@ -1,5 +1,5 @@
 # Motion-compensated MR CINE reconstruction with reconstruction-driven motion estimation
-[Jiazhen Pan](https://sites.google.com/view/jzpeterpan/), 
+[Jiazhen Pan](https://jzpeterpan.github.io/), 
 [Wenqi Huang](https://scholar.google.com/citations?user=to2zNj4AAAAJ&hl=de), 
 [Daniel Rueckert](https://scholar.google.com/citations?user=H0O0WnQAAAAJ&hl=en), 
 [Thomas Kuestner](https://www.medizin.uni-tuebingen.de/de/das-klinikum/mitarbeiter/profil/252),
