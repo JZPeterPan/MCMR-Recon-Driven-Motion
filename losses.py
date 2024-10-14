@@ -1,7 +1,8 @@
 import torch
 from utils.loss_related import gradient, gradient_central, temporal_grad_central, jacobian_determinant
-import optoth.warp
 import lpips
+from utils.general import warp_torch
+
 
 
 class CriterionBase(torch.nn.Module):
@@ -71,7 +72,7 @@ class CriterionMotion(CriterionBase, torch.nn.Module):
                 flow_in_loop = [flow_preds[-1]]
             for i, (i_weight, i_flow) in enumerate(zip(i_weights, flow_in_loop)):
                 if loss_name == 'photometric':
-                    warped = optoth.warp.WarpFunction.apply(image1, i_flow.permute(0, 2, 3, 1).flip(-1))
+                    warped = warp_torch(image1, i_flow)
                     i_loss = loss_term(image2, warped)
                 elif loss_name == 'sp_smooth':
                     i_loss = loss_term(i_flow, image1)
