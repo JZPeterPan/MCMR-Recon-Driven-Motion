@@ -1,7 +1,7 @@
 import torch
 from utils.loss_related import gradient, gradient_central, temporal_grad_central, jacobian_determinant
 import lpips
-from utils.general import warp_torch
+from utils.warp import warp_torch
 
 
 
